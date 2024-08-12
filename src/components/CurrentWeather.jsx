@@ -8,6 +8,9 @@ const kelvinToCelsius = (k) => {
 const CurrentWeather = ({ apiData }) => {
   return (
     <div className="bg-blue-50 rounded-3xl shadow-xl p-6 mt-6 mx-auto w-full max-w-md">
+      <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">
+        Current Weather
+      </h2>
       {apiData.main ? (
         <div className="text-center">
           <div className="flex justify-center mb-4">
