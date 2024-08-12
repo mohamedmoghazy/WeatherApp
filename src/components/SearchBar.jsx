@@ -15,7 +15,7 @@ const SearchBar = ({ getState, inputHandler, submitHandler }) => {
         <input
           type="text"
           id="location-name"
-          className="w-full p-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          className="w-80 p-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           onChange={inputHandler}
           value={getState}
         />
