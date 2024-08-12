@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
-import './App.css';
-import countries from 'i18n-iso-countries';
+import { useState, useEffect } from "react";
+import "./App.css";
+import countries from "i18n-iso-countries";
 
 import dailyForecast from './components/dailyForecast.jsx';
 import hourlyForecast from './components/hourlyForecast.jsx';
@@ -11,8 +11,8 @@ import search from './components/search.jsx';
 function App() {
   // State
   const [apiData, setApiData] = useState({});
-  const [getState, setGetState] = useState('tamilnadu');
-  const [state, setState] = useState('tamilnadu');
+  const [getState, setGetState] = useState("tamilnadu");
+  const [state, setState] = useState("tamilnadu");
 
   // API KEY AND URL
   const apiKey = import.meta.env.VITE_API_KEY;
@@ -63,7 +63,7 @@ function App() {
           </button>
         </div>
 
-        <div className="card mt-3 mx-auto" style={{ width: '60vw' }}>
+        <div className="card mt-3 mx-auto" style={{ width: "60vw" }}>
           {apiData.main ? (
             <div className="card-body text-center">
               <img
@@ -77,20 +77,20 @@ function App() {
               </p>
 
               <p className="h5">
-                <i className="fas fa-map-marker-alt"></i>{' '}
+                <i className="fas fa-map-marker-alt"></i>{" "}
                 <strong>{apiData.name}</strong>
               </p>
 
               <div className="row mt-4">
                 <div className="col-md-6">
                   <p>
-                    <i className="fas fa-temperature-low"></i>{' '}
+                    <i className="fas fa-temperature-low"></i>{" "}
                     <strong>
                       {kelvinToFarenheit(apiData.main.temp_min)}&deg; C
                     </strong>
                   </p>
                   <p>
-                    <i className="fas fa-temperature-high"></i>{' '}
+                    <i className="fas fa-temperature-high"></i>{" "}
                     <strong>
                       {kelvinToFarenheit(apiData.main.temp_max)}&deg; C
                     </strong>
@@ -98,14 +98,14 @@ function App() {
                 </div>
                 <div className="col-md-6">
                   <p>
-                    {' '}
+                    {" "}
                     <strong>{apiData.weather[0].main}</strong>
                   </p>
                   <p>
                     <strong>
-                      {' '}
-                      {countries.getName(apiData.sys.country, 'en', {
-                        select: 'official',
+                      {" "}
+                      {countries.getName(apiData.sys.country, "en", {
+                        select: "official",
                       })}
                     </strong>
                   </p>
@@ -119,10 +119,11 @@ function App() {
       </div>
       <footer className="footer">
         <code>
-          Created by{' '}
-          <a href="https://github.com/imshines" target="none">
-            imshines
-          </a>{' '}
+          Created by
+          <a href="https://github.com/mohamedmoghazy/WeatherApp" target="none">
+            {" "}
+            CrossOver team{" "}
+          </a>
           using React
         </code>
       </footer>
