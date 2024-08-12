@@ -2,6 +2,12 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import countries from "i18n-iso-countries";
 
+import dailyForecast from './components/dailyForecast.jsx';
+import hourlyForecast from './components/hourlyForecast.jsx';
+import weeklyForecast from './components/weeklyForecast.jsx';
+import map from './components/map.jsx';
+import search from './components/search.jsx';
+
 function App() {
   // State
   const [apiData, setApiData] = useState({});
