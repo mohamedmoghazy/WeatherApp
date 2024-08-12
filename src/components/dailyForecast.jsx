@@ -1,5 +1,5 @@
-const dailyForecast = () => {
+const DailyForecast = () => {
 
 };
 
-export default dailyForecast;
+export default DailyForecast;

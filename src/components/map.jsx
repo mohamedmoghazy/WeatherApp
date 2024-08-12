@@ -1,5 +1,5 @@
-const map = () => {
+const Map = () => {
 
 };
 
-export default map;
+export default Map;

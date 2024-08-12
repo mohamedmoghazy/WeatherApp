@@ -2,11 +2,12 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import countries from "i18n-iso-countries";
 
-import dailyForecast from './components/dailyForecast.jsx';
-import hourlyForecast from './components/hourlyForecast.jsx';
-import weeklyForecast from './components/weeklyForecast.jsx';
-import map from './components/map.jsx';
-import search from './components/search.jsx';
+import DailyForecast from './components/DailyForecast.jsx';
+import HourlyForecast from './components/HourlyForecast.jsx';
+import WeeklyForecast from './components/WeeklyForecast.jsx';
+import Map from './components/Map.jsx';
+import Search from './components/Search.jsx';
+
 
 function App() {
   // State
@@ -43,25 +44,7 @@ function App() {
         <h2>React Weather App</h2>
       </header>
       <div className="container">
-        <div className="mt-3 d-flex flex-column justify-content-center align-items-center">
-          <div className="col-auto">
-            <label htmlFor="location-name" className="col-form-label">
-              Enter Location :
-            </label>
-          </div>
-          <div className="col-auto">
-            <input
-              type="text"
-              id="location-name"
-              className="form-control"
-              onChange={inputHandler}
-              value={getState}
-            />
-          </div>
-          <button className="btn btn-primary mt-2" onClick={submitHandler}>
-            Search
-          </button>
-        </div>
+        
 
         <div className="card mt-3 mx-auto" style={{ width: "60vw" }}>
           {apiData.main ? (

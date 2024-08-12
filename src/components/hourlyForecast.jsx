@@ -1,5 +1,5 @@
-const hourlyForecast = () => {
+const HourlyForecast = () => {
 
 };
 
-export default hourlyForecast;
+export default HourlyForecast;
