@@ -3,6 +3,7 @@ import CurrentWeather from "./components/CurrentWeather.jsx";
 import Header from "./components/Header.jsx";
 import SearchBar from "./components/SearchBar.jsx";
 import Footer from "./components/Footer.jsx";
+import DailyForcast from "./components/DailyForcast.jsx";
 
 function App() {
   const [apiData, setApiData] = useState({});
@@ -49,10 +50,14 @@ function App() {
             <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"></div>
           </div>
         ) : (
+            <>
           <div className="transition-transform duration-500 transform hover:scale-105">
-            <CurrentWeather apiData={apiData} />
-          </div>
-        )}
+              <CurrentWeather apiData={apiData} />
+              </div>
+              <DailyForcast location={state } />
+            </>
+        )
+        }
       </div>
       <Footer />
     </div>
