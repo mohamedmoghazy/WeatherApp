@@ -2,15 +2,19 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="footer">
-      <code>
-        Created by
-        <a href="https://github.com/mohamedmoghazy/WeatherApp" target="none">
-          {" "}
-          CrossOver team{" "}
-        </a>
+    <footer className="bg-blue-600 text-white py-4 text-center">
+      <p className="text-sm">
+        Created by{" "}
+        <a
+          href="https://github.com/mohamedmoghazy/WeatherApp"
+          className="underline hover:text-blue-300"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          CrossOver team
+        </a>{" "}
         using React
-      </code>
+      </p>
     </footer>
   );
 };
